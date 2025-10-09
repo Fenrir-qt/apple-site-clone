@@ -1,9 +1,4 @@
 import { useEffect, useState } from "react";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
-import GridCards from "./GridCards";
-import Mac from "./Mac";
-import Movies from "./Movies";
 
 import iPhoneImg from "../assets/images/iPhones.png";
 
@@ -16,7 +11,6 @@ function Home() {
 
   return (
     <>
-      <Header />
       <div className="text-center text-sm p-3">
         <span className="text-blue-500 cursor-pointer hover:underline">Shop online</span> for free delivery. Call us at 1800-1651-0525 or visit <span className="text-blue-500 cursor-pointer hover:underline">support</span>.
       </div>
@@ -46,10 +40,6 @@ function Home() {
           </div>
         </div>
       </div>
-      <Mac />
-      <GridCards />
-      <Movies />
-      <Footer />
     </>
   );
 }

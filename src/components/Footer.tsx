@@ -58,7 +58,7 @@ function Footer() {
     };
 
     return (
-        <div className="bg-slate-200 max-w-full w-full p-3">
+        <footer className="bg-slate-200 max-w-full w-full p-3">
             {/* Footnotes */}
             <ol className="list-decimal max-w-2xs md:max-w-4xl mx-auto text-xs text-gray-600 pl-5">
                 {Footnotes.map((note, index) => (
@@ -99,7 +99,7 @@ function Footer() {
             <div className='pt-3'>
                 <p className='max-w-4xl mx-auto text-xs'>For demonstration purposes only. Not an official Apple website.</p>
             </div>
-        </div>
+        </footer>
     );
 }
 
