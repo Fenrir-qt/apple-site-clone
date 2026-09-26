@@ -3,6 +3,7 @@ import { FaApple } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import { IoBagOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { IoMdClose } from "react-icons/io";
 
 const menuItems = [
   { name: "Store", href: "#" },
@@ -41,6 +42,7 @@ function Header() {
                 key={item.name}
                 href={item.href}
                 className="hover:text-blue-500 transition-colors text-sm"
+                onClick={handleScrollTop}
               >
                 {item.name}
               </a>
@@ -54,18 +56,24 @@ function Header() {
             onClick={toggleMenu}
             aria-label="Open menu"
           >
-            <RxHamburgerMenu />
+            {!isMenuOpen 
+              ? <RxHamburgerMenu /> 
+              : <IoMdClose />
+            }
           </button>
         </nav>
         {/* Mobile Dropdown */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white shadow-lg absolute top-full left-0 w-full flex flex-col items-center py-4 z-50">
+          <div className="md:hidden bg-white/96 backdrop-blur-3xl shadow-lg absolute top-full left-0 w-full flex flex-col items-center py-4 z-50">
             {menuItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 className="py-2 px-4 w-full text-center hover:bg-blue-50 hover:text-blue-500 transition-colors"
-                onClick={() => setMenuOpen(false)}
+                onClick={(e) => {
+                  setMenuOpen(false);
+                  handleScrollTop(e);
+                }}
               >
                 {item.name}
               </a>
