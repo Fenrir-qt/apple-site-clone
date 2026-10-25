@@ -60,12 +60,12 @@ function Footer() {
     return (
         <footer className="bg-slate-200 max-w-full w-full p-3">
             {/* Footnotes */}
-            <ol className="list-decimal max-w-2xs md:max-w-4xl mx-auto text-xs text-gray-600 pl-5">
+            <ol className="list-decimal max-w-xl md:max-w-4xl mx-auto text-xs text-gray-600 pl-5">
                 {Footnotes.map((note, index) => (
                     <li key={index} className="pt-2">{note.description}</li>
                 ))}
             </ol>
-            <div className="max-w-2xs md:max-w-4xl mx-auto text-gray-600">
+            <div className="max-w-xl md:max-w-4xl mx-auto text-gray-600">
                 <p className="text-xs pt-2">A subscription is required for Apple TV+.</p>
                 <p className="text-xs pt-2">Features are subject to change. Some features, applications, and services may not be available in all regions or all languages.</p>
             </div>
